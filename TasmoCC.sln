@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasmoCC.Service", "TasmoCC.Service\TasmoCC.Service.csproj", "{91DA58A3-DC2D-4DA8-8A9A-E1A958BD0B74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasmoCC.MongoDb", "TasmoCC.MongoDb\TasmoCC.MongoDb.csproj", "{12511DAB-1613-4534-AF6C-9DA07230A19E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasmoCC.Mqtt", "TasmoCC.Mqtt\TasmoCC.Mqtt.csproj", "{DA230338-C915-430E-88CF-9DA3A7C8507E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasmoCC.Tasmota", "TasmoCC.Tasmota\TasmoCC.Tasmota.csproj", "{856B3DFA-34B4-4B78-B050-9DE48198BD29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasmoCC.Tests", "TasmoCC.Tests\TasmoCC.Tests.csproj", "{09F547AF-6ACC-4D72-A1E3-5D8BC8084617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasmoCC.Emulator", "TasmoCC.Emulator\TasmoCC.Emulator.csproj", "{A0556ED0-EDC7-47D2-B37A-01216679795A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91DA58A3-DC2D-4DA8-8A9A-E1A958BD0B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91DA58A3-DC2D-4DA8-8A9A-E1A958BD0B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91DA58A3-DC2D-4DA8-8A9A-E1A958BD0B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91DA58A3-DC2D-4DA8-8A9A-E1A958BD0B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12511DAB-1613-4534-AF6C-9DA07230A19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12511DAB-1613-4534-AF6C-9DA07230A19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12511DAB-1613-4534-AF6C-9DA07230A19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12511DAB-1613-4534-AF6C-9DA07230A19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA230338-C915-430E-88CF-9DA3A7C8507E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA230338-C915-430E-88CF-9DA3A7C8507E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA230338-C915-430E-88CF-9DA3A7C8507E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA230338-C915-430E-88CF-9DA3A7C8507E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856B3DFA-34B4-4B78-B050-9DE48198BD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856B3DFA-34B4-4B78-B050-9DE48198BD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856B3DFA-34B4-4B78-B050-9DE48198BD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856B3DFA-34B4-4B78-B050-9DE48198BD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09F547AF-6ACC-4D72-A1E3-5D8BC8084617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F547AF-6ACC-4D72-A1E3-5D8BC8084617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F547AF-6ACC-4D72-A1E3-5D8BC8084617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F547AF-6ACC-4D72-A1E3-5D8BC8084617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0556ED0-EDC7-47D2-B37A-01216679795A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0556ED0-EDC7-47D2-B37A-01216679795A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0556ED0-EDC7-47D2-B37A-01216679795A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0556ED0-EDC7-47D2-B37A-01216679795A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA4C7E6B-8F0F-4E0A-8F0B-3DC82675735D}
+	EndGlobalSection
+EndGlobal

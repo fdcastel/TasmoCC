@@ -1,0 +1,63 @@
+version: "1"
+
+templates:
+  mini:
+    definition: >
+      {"NAME":"Sonoff Mini","GPIO":[17,0,0,0,9,0,0,0,21,56,0,0,255],"FLAG":0,"BASE":1}
+    thumbnailUrl: "https://static.ubnt.com/fingerprint/0/3154_51x51.png"
+    imageUrl: "https://static.ubnt.com/fingerprint/0/3154_257x257.png"
+
+  basic:
+    definition: >
+      {"NAME":"Sonoff Basic","GPIO":[17,255,255,255,255,0,0,0,21,56,255,0,0],"FLAG":0,"BASE":1}
+    thumbnailUrl: "https://static.ubnt.com/fingerprint/0/3805_51x51.png"
+    imageUrl: "https://static.ubnt.com/fingerprint/0/3805_257x257.png"
+
+  basicR3:
+    definition: >
+      {"NAME":"Sonoff BasicR3","GPIO":[17,255,0,255,255,0,0,0,21,56,255,0,255],"FLAG":0,"BASE":1}
+    thumbnailUrl: "https://static.ubnt.com/fingerprint/0/3805_51x51.png"
+    imageUrl: "https://static.ubnt.com/fingerprint/0/3805_257x257.png"
+
+  4CHPro2:
+    definition: >
+      {"NAME":"Sonoff 4CHPro2","GPIO":[17,255,255,255,23,22,18,19,21,56,20,24,0],"FLAG":0,"BASE":23}
+    thumbnailUrl: "https://static.ubnt.com/fingerprint/0/3743_51x51.png"
+    imageUrl: "https://static.ubnt.com/fingerprint/0/3743_257x257.png"
+
+  dualR2:
+    definition: >
+      {"NAME":"Sonoff Dual R2","GPIO":[255,255,0,255,0,22,255,17,21,56,0,0,0],"FLAG":0,"BASE":39}
+    thumbnailUrl: "https://static.ubnt.com/fingerprint/0/3875_51x51.png"
+    imageUrl: "https://static.ubnt.com/fingerprint/0/3875_257x257.png"
+
+devices:
+  common:
+    setupCommands: "Time 0; HostName 1; SetOption53 1; Emulation 2"
+
+  SON-Quad:
+    mac: "2c:f4:32:a8:01:67"
+    friendlyNames:
+      ["Quad1", "Quad2", "Quad3", "Quad4"]
+    templateName: 4CHPro2
+
+  SON-Dual:
+    mac: "dc:4f:22:ac:fb:d6"
+    friendlyNames: ["Dual1", "Dual2"]
+    templateName: dualR2
+
+  SON-Relay1:
+    mac: "d8:f1:5b:90:78:5f"
+    friendlyNames: ["Relay1"]
+    templateName: basic
+
+  SON-Relay2:
+    mac: "d8:f1:5b:90:05:ec"
+    friendlyNames: ["Relay2"]
+    disabled: true
+    templateName: basic
+
+  SON-Relay3:
+    mac: "dc:4f:22:aa:7e:97"
+    friendlyNames: ["Relay3"]
+    templateName: basicR3

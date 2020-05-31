@@ -1,0 +1,40 @@
+.thumbnail {
+    width: auto;
+    height: 100%;
+    max-height: 51px;
+}
+
+.thumbnail-col {
+    width: 60px;
+}
+
+.thumbnail-disabled {
+    opacity: 50%;
+}
+
+/* Sidebar */
+
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: absolute;
+    width: 30rem;
+    right: 0rem;
+    top: 3rem;
+
+    z-index: 900; /* https://getbootstrap.com/docs/4.1/layout/overview/#z-index */
+}
+
+.sidebar-header {
+    min-height: 60px;
+}
+
+.sidebar-hidden .sidebar {
+    right: -30rem;
+}
+
+.col-sidebar-reserved-area {
+    flex: 0 0 30rem; /* https://stackoverflow.com/a/50032603 */
+}

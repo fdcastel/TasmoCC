@@ -1,0 +1,56 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: dev-tasmocc-mongodb
+    hostname: mongodb
+    command: ["mongod", "--replSet", "rs0"]
+    environment:
+      - MONGO_INITDB_DATABASE=tasmocc
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker/mongodb-init.js:/docker-entrypoint-initdb.d/mongodb-init.js:ro
+      - mongodb-db:/data/db
+      - mongodb-configdb:/data/configdb
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: dev-tasmocc-mosquitto
+    hostname: mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./docker/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./docker/mosquitto.passwd:/mosquitto/config/mosquitto.passwd:ro
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+
+  tasmocc.emulator:
+    container_name: dev-tasmocc-emulator
+    ports:
+      - "80"
+
+  tasmocc.service:
+    container_name: dev-tasmocc-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MONGODB__CONNECTIONSTRING=mongodb://mongodb
+      - MQTT__HOST=mosquitto
+      - MQTT__USERNAME=devuser
+      - MQTT__PASSWORD=devpassword
+    ports:
+      - "80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+volumes:
+  mongodb-db:
+    name: dev-tasmocc-mongodb-db
+  mongodb-configdb:
+    name: dev-tasmocc-mongodb-configdb
+  mosquitto-data:
+    name: dev-tasmocc-mosquitto-data
+  mosquitto-log:
+    name: dev-tasmocc-mosquitto-log

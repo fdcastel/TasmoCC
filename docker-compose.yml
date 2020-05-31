@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  tasmocc.emulator:
+    image: ${DOCKER_REGISTRY-}tasmocc-emulator
+    build:
+      context: .
+      dockerfile: TasmoCC.Emulator/Dockerfile
+
+  tasmocc.service:
+    image: ${DOCKER_REGISTRY-}tasmocc-service
+    build:
+      context: .
+      dockerfile: TasmoCC.Service/Dockerfile
